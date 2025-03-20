@@ -1,0 +1,96 @@
+/*za elemente z ID header */
+#header {
+    display:flex;
+    justify-content:center;
+    
+}
+/*za elemente v elementu  ID header vrsta h1*/
+#header > h1 {
+    font-size: 35px;
+    font-style: oblique;
+    color:orange; /*lahko das tudi hex #FFA500 ali rgb */
+    border:4px solid black;
+    padding:10px 20px;
+    border-radius:5px;
+}
+/* #main_container {
+    border: 2px solid red; /*naredis da si oznacis za preglednost ctrl + k +c zakomentiras
+} */
+#sub_container {
+    font-size:20px;
+    font-weight: bolder;
+    /* border: 2px dotted blue; */
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+.POVEZAVA_KONTEJNER{
+       
+        padding:5px 10px 5px 10px;
+        margin: 10px;
+        background-color: rgb(243, 170, 36);
+        border-radius: 10px;
+
+        
+}
+/*hover uporabis za efekte oz akcije elementa, spremeni stil takrat ko je akcija*/
+.POVEZAVA_KONTEJNER:hover {
+        background-color:rgb(252, 199, 100) ;
+}
+.POVEZAVA_KONTEJNER > a {
+    color:rgb(2, 2, 2);
+    text-decoration: none;
+}
+
+#button_container{
+    display:flex;
+    justify-content:center;
+    margin: 50px 0px 0px 0px;
+}
+
+#button_container > button{
+    font-size: 30px;
+    color:rgb(255, 255, 255);
+    border-color: rgb(71, 52, 88);
+    border: 5px solid rgb(139, 12, 139);
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: rgb(152, 155, 155);
+}
+#button_container > button:hover{
+transform: scale(1.2);
+cursor:grab;
+}
+#dela_gumb > a{
+    display:flex;
+    justify-content: center;
+    margin: 10px 0px 0px 0px;
+    border: 5px solid rgb(139, 12, 139);
+    padding: 5px 5px 5px 5px;
+    border-color: rgb(71, 52, 88);
+}
+#gumb_java {
+    display: flex;
+    justify-content: center; /* Postavi gumb na sredino */
+    align-items: center; /* Centriranje v primeru večje višine */
+  
+}
+
+#gumb_java > button {
+    display: inline-block; /* Tesno okoli besedila */
+    text-align: center;
+    width: auto; /* Prilagodi se vsebini */
+    height: auto;
+    margin: 20px;
+    padding: 5px 10px; /* Minimalni padding */
+    border: 2px solid rgb(139, 12, 139);
+    background-color:blueviolet;
+    font-size: 30px;
+    font-style:italic;
+}
+
+#gumb_java > button:hover{
+    transform: scale(1.5);
+    cursor:grab;
+    background-color: blue;
+}
