@@ -136,7 +136,7 @@ body {
 
 /* Set Background Image */
 body {
-    background: url('https://github.com/andro2505/TEST1/blob/main/image.jpg') no-repeat center center fixed;
+    background: url('https://raw.githubusercontent.com/andro2505/TEST1/refs/heads/main/image.jpg') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Poppins', sans-serif;
 }
