@@ -1,142 +1,108 @@
-/*za elemente z ID header */
-#header {
-    display:flex;
-    justify-content:center;
-    
-}
-/*za elemente v elementu  ID header vrsta h1*/
-#header > h1 {
-    font-size: 35px;
-    font-style: oblique;
-    color:orange; /*lahko das tudi hex #FFA500 ali rgb */
-    border:4px solid black;
-    padding:10px 20px;
-    border-radius:5px;
-}
-/* #main_container {
-    border: 2px solid red; /*naredis da si oznacis za preglednost ctrl + k +c zakomentiras
-} */
-#sub_container {
-    font-size:20px;
-    font-weight: bolder;
-    /* border: 2px dotted blue; */
-    display:flex;
-    flex-direction: column;
-    align-items:center;
-}
-.POVEZAVA_KONTEJNER{
-       
-        padding:5px 10px 5px 10px;
-        margin: 10px;
-        background-color: rgb(243, 170, 36);
-        border-radius: 10px;
-
-        
-}
-/*hover uporabis za efekte oz akcije elementa, spremeni stil takrat ko je akcija*/
-.POVEZAVA_KONTEJNER:hover {
-        background-color:rgb(252, 199, 100) ;
-}
-.POVEZAVA_KONTEJNER > a {
-    color:rgb(2, 2, 2);
-    text-decoration: none;
-}
-
-#button_container{
-    display:flex;
-    justify-content:center;
-    margin: 50px 0px 0px 0px;
-}
-
-#button_container > button{
-    font-size: 30px;
-    color:rgb(255, 255, 255);
-    border-color: rgb(71, 52, 88);
-    border: 5px solid rgb(139, 12, 139);
-    border-radius: 10px;
-    padding: 5px 10px;
-    background-color: rgb(152, 155, 155);
-}
-#button_container > button:hover{
-transform: scale(1.2);
-cursor:grab;
-}
-#dela_gumb > a{
-    display:flex;
-    justify-content: center;
-    margin: 10px 0px 0px 0px;
-    border: 5px solid rgb(139, 12, 139);
-    padding: 5px 5px 5px 5px;
-    border-color: rgb(71, 52, 88);
-}
-#gumb_java {
-    display: flex;
-    justify-content: center; /* Postavi gumb na sredino */
-    align-items: center; /* Centriranje v primeru večje višine */
-  
-}
-
-#gumb_java > button {
-    display: inline-block; /* Tesno okoli besedila */
-    text-align: center;
-    width: auto; /* Prilagodi se vsebini */
-    height: auto;
-    margin: 20px;
-    padding: 5px 10px; /* Minimalni padding */
-    border: 2px solid rgb(139, 12, 139);
-    background-color:blueviolet;
-    font-size: 30px;
-    font-style:italic;
-}
-
-#gumb_java > button:hover{
-    transform: scale(1.5);
-    cursor:grab;
-    background-color: blue;
-}
-
-
-/* Osnovni stil za večje zaslone (računalniki) */
+/* Animated gradient background */
 body {
-    font-size: 18px;
-    margin: 20px;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffdde1);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* PRILAGODITEV ZA TABLICE (širina do 768px) */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 80px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* SOCIAL MEDIA ICONS */
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    font-size: 4rem;
+    color: white;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #ff4d6d;
+}
+
+/* CUSTOM BUTTONS */
+.btn-custom {
+    display: inline-block;
+    background-color: #ff4d6d;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(255, 77, 109, 0.3);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-custom:hover {
+    transform: scale(1.1);
+    background-color: #e60050;
+}
+
+/* TEST BUTTON */
+.btn-test {
+    background-color: #ff9a9e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.btn-test:hover {
+    background-color: #ff6b6b;
+}
+
+/* RESPONSIVE DESIGN */
 @media screen and (max-width: 768px) {
-    body {
-        font-size: 16px;
-        margin: 10px;
+    .hero {
+        padding: 50px 15px;
+        font-size: 1.2rem;
     }
-    .container {
-        width: 90%;
-    }
-    .gumb {
-        width: 100%; /* Gumbi čez celotno širino */
+    .btn-custom {
+        font-size: 1rem;
+        padding: 10px 20px;
     }
 }
 
-/* PRILAGODITEV ZA TELEFONE (širina do 480px) */
 @media screen and (max-width: 480px) {
-    body {
-        font-size: 14px;
-        margin: 5px;
+    .hero {
+        padding: 40px 10px;
+        font-size: 1rem;
     }
-    .container {
-        width: 100%;
-        padding: 5px;
-    }
-    .gumb {
-        width: 100%;
-        font-size: 14px;
-        padding: 10px;
+    .btn-custom {
+        font-size: 0.9rem;
+        padding: 8px 15px;
     }
 }
-
 
 /* Set Background Image */
 body {
-    background: url('https://raw.githubusercontent.com/andro2505/TEST1/refs/heads/main/image.jpg') no-repeat center center fixed;
+    background: url('image.jpg') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Poppins', sans-serif;
 }
@@ -152,7 +118,6 @@ body::before {
     background: rgba(0, 0, 0, 0.5); /* Dark overlay effect */
     z-index: -1;
 }
-
 
 
 
